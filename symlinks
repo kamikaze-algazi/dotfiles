@@ -1,0 +1,17 @@
+#!/bin/bash
+rm -rm ~/.vim
+ln -s ~/.dotfiles/vim ~/.vim
+rm ~/.gitconfig
+ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+rm ~/.gitignore
+ln -s ~/.dotfiles/gitignore ~/.gitignore
+rm ~/.gitignore_global
+ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+rm ~/.tmux.conf
+ln -s ~/.dotfiles/tmux~/.conf ~/.tmux.conf
+rm ~/.vimrc
+ln -s ~/.dotfiles/vimrc ~/.vimrc
+rm ~/.zshrc
+ln -s ~/.dotfiles/zshrc ~/.zshrc
+rm -rf ~/.oh-my-zsh
+ln -s ~/.dotfiles/oh-my-zsh ~/.oh-my-zsh

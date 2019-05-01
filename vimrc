@@ -13,6 +13,7 @@ Plug 'morhetz/gruvbox'
 Plug 'davidhalter/jedi-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 colorscheme gruvbox
