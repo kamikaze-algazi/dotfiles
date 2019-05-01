@@ -1,0 +1,9 @@
+[user]
+	name = kamikaze-algazi
+	email = kamikaze.algazi@gmail.com
+[credential]
+	helper = cache
+[core]
+	excludesfile = .gitignore_global
+[push]
+	default = simple
