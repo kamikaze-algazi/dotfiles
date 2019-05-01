@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rm ~/.vim
+rm -rf ~/.vim
 ln -s ~/.dotfiles/vim ~/.vim
 rm ~/.gitconfig
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
