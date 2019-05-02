@@ -27,6 +27,9 @@ let mapleader = ","
 nnoremap <CR> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
+nnoremap <C-n> :tabn<CR>
+nnoremap <C-p> :tabp<CR>
+nnoremap <C-t> :tabe<space>
 
 set autoindent
 set autoread
