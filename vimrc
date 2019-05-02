@@ -8,12 +8,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'morhetz/gruvbox'
 Plug 'davidhalter/jedi-vim'
+Plug 'morhetz/gruvbox'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 colorscheme gruvbox
@@ -66,8 +67,11 @@ set showmode
 set smartcase
 set smarttab
 set softtabstop=4
+set t_Co=256
+set t_ut=
 set tabpagemax=50
 set tabstop=4
+set term=screen-256color
 set timeoutlen=2000
 set title
 set ttimeoutlen=0
