@@ -124,3 +124,4 @@ alias sqlfreakz="ssh sqlfreakz@phoenix.goucher.edu"
 alias startpsql="sudo -b -u postgres postmaster -D /Users/Shared/PostgreSQL/data >/Users/Shared/PostgreSQL/logfile 2>&1"
 alias stoppsql="sudo -u postgres pg_ctl -D /Users/Shared/PostgreSQL/data stop"
 alias supsql='sudo -u postgres psql postgres'
+unsetopt BEEP
