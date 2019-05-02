@@ -1,4 +1,8 @@
+" vim:foldmethod=marker:foldlevel=0
+
 set nocompatible
+set encoding=utf-8
+scriptencoding utf-8
 filetype off
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -15,6 +19,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 colorscheme gruvbox
@@ -25,21 +30,34 @@ filetype plugin indent on
 
 let mapleader = ","
 nnoremap <CR> :nohlsearch<CR>
+nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
+<<<<<<< HEAD
 nnoremap <C-n> :tabn<CR>
 nnoremap <C-p> :tabp<CR>
 nnoremap <C-t> :tabe<space>
+=======
+nnoremap gV `[v`]
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
+>>>>>>> 507405203672cadad311e30a36f0f24b17134c7c
 
 set autoindent
+set autowrite
 set autoread
 set backspace=indent,eol,start
+set cmdheight=2
 set complete-=i
 set confirm
 set cursorline
 set display+=lastline
-set encoding=utf-8
 set expandtab
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
+set foldnestmax=10
 set hidden
 set hlsearch
 set ignorecase
@@ -47,7 +65,8 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
-set listchars=tab:▸\ ,eol:¬
+set list
+set modelines=1
 set mouse=a
 set noerrorbells
 set noswapfile
@@ -74,3 +93,18 @@ set ttimeoutlen=0
 set ttyfast
 set wildmenu
 set wrap
+
+if exists('+list')
+  set list
+  if exists('+listchars')
+    set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+  endif
+endif
+
+let g:indentLine_char = '⎸'
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '.'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
+let g:indentLine_setConceal = 0
