@@ -24,8 +24,10 @@ filetype plugin indent on
 
 let mapleader = ","
 nnoremap <CR> :nohlsearch<CR>
+nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
+nnoremap gV `[v`]
 
 set autoindent
 set autoread
@@ -36,6 +38,10 @@ set cursorline
 set display+=lastline
 set encoding=utf-8
 set expandtab
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
+set foldnestmax=10
 set hidden
 set hlsearch
 set ignorecase
@@ -44,6 +50,7 @@ set laststatus=2
 set lazyredraw
 set linebreak
 set listchars=tab:▸\ ,eol:¬
+set modelines=1
 set mouse=a
 set noerrorbells
 set noswapfile
@@ -67,3 +74,5 @@ set ttimeoutlen=0
 set ttyfast
 set wildmenu
 set wrap
+
+" vim:foldmethod=marker:foldlevel=0
