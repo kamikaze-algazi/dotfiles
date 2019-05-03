@@ -62,7 +62,6 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
-set list
 set modelines=1
 set mouse=a
 set noerrorbells
@@ -90,13 +89,6 @@ set ttimeoutlen=0
 set ttyfast
 set wildmenu
 set wrap
-
-if exists('+list')
-  set list
-  if exists('+listchars')
-    set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-  endif
-endif
 
 let g:indentLine_char = '⎸'
 let g:indentLine_leadingSpaceEnabled = 1
