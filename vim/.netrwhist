@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/alyx/.vim/ftplugin'
 let g:netrw_dirhist_2='/Users/alyx/.vim'
 let g:netrw_dirhist_3='/home/alyx/.oh-my-zsh'
 let g:netrw_dirhist_4='/var/lib/postgresql/11/main'
 let g:netrw_dirhist_5='/home/alyx/public_html'
+let g:netrw_dirhist_6='/home/alyx/.dotfiles/vim'

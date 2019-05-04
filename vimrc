@@ -62,7 +62,6 @@ set incsearch
 set laststatus=2
 set lazyredraw
 set linebreak
-set list
 set modelines=1
 set mouse=a
 set noerrorbells
@@ -91,17 +90,16 @@ set ttyfast
 set wildmenu
 set wrap
 
-if exists('+list')
-  set list
-  if exists('+listchars')
-    set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-  endif
-endif
-
-let g:indentLine_char = '⎸'
+let g:indentLine_char = '|'
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
-let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_showFirstIndentLevel = 0
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 let g:indentLine_setConceal = 0
+let g:indentLine_color_term = 239
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
