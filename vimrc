@@ -33,16 +33,13 @@ nnoremap <CR> :nohlsearch<CR>
 nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
-<<<<<<< HEAD
 nnoremap <C-n> :tabn<CR>
 nnoremap <C-p> :tabp<CR>
 nnoremap <C-t> :tabe<space>
-=======
 nnoremap gV `[v`]
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
->>>>>>> 507405203672cadad311e30a36f0f24b17134c7c
 
 set autoindent
 set autowrite
