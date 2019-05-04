@@ -19,7 +19,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
 call plug#end()
 
 colorscheme gruvbox
