@@ -3,12 +3,12 @@
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-HOSTNAME=$(echo $(hostname -s) | tr '[:upper:]' '[:lower:]')
-if [ "$HOSTNAME" = "mbp" ]; then
+HOSTNAME=$(echo $(scutil --get LocalHostName))
+if [ "$HOSTNAME" = "MBP" ]; then
     export ZSH="/Users/alyx/.oh-my-zsh"
 elif [ "$HOSTNAME" = "arch4alyx" ]; then
     export ZSH="/home/alyx/.oh-my-zsh"
-elif [ "$HOSTNAME" = "vera" ]; then
+elif [ "$HOSTNAME" = "Vera" ]; then
     export ZSH="/home/alyx/.oh-my-zsh"
 elif [ "$HOSTNAME" = "phoenix" ]; then
     export ZSH="/home/sqlfreakz/.oh-my-zsh"
