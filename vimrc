@@ -29,8 +29,7 @@ syntax enable
 filetype plugin indent on
 
 let mapleader = ","
-nnoremap <CR> :nohlsearch<CR>
-nnoremap <space> za
+nnoremap <space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <C-n> :tabn<CR>
@@ -40,6 +39,7 @@ nnoremap gV `[v`]
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
+nnoremap <CR> i<CR><Esc>
 
 set autoindent
 set autowrite
