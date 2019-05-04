@@ -13,6 +13,7 @@ endif
 
 call plug#begin()
 Plug 'davidhalter/jedi-vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'morhetz/gruvbox'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
