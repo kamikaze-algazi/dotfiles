@@ -3,15 +3,15 @@
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
-HOSTNAME=$(echo $(scutil --get LocalHostName))
-if [ "$HOSTNAME" = "MBP" ]; then
-    export ZSH="/Users/alyx/.oh-my-zsh"
-elif [ "$HOSTNAME" = "arch4alyx" ]; then
+HOSTNAME=$(hostname -s)
+if [ "$HOSTNAME" = "arch4alyx" ]; then
     export ZSH="/home/alyx/.oh-my-zsh"
 elif [ "$HOSTNAME" = "Vera" ]; then
     export ZSH="/home/alyx/.oh-my-zsh"
 elif [ "$HOSTNAME" = "phoenix" ]; then
     export ZSH="/home/sqlfreakz/.oh-my-zsh"
+elif [ "$(echo $(scutil --get LocalHostName))" = "MBP" ]; then
+    export ZSH="/Users/alyx/.oh-my-zsh"
 fi
 
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,11 +111,11 @@ alias pip="pip2"
 alias open="xdg-open"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-if [ "$(hostname -s)" = "mbp" ]; then
+if [ "$HOSTNAME" = "mbp" ]; then
     source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
-elif [ "$(hostname -s)" = "arch4alyx" ]; then
+elif [ "$HOSTNAME" = "arch4alyx" ]; then
     source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-elif [ "$(hostname -s)" = "phoenix" ]; then
+elif [ "$HOSTNAME" = "phoenix" ]; then
     source /home/sqlfreakz/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
 fi
 alias lsgit="git ls-tree --full-tree -r --name-only HEAD"
