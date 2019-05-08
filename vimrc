@@ -38,6 +38,8 @@ noremap <c-t> :tabe<space>
 nnoremap <f2> :set invpaste paste?<cr>
 imap <f2> <c-O>:set invpaste paste?<cr>
 set pastetoggle=<f2>
+nnoremap <f1> :w<cr>
+nnoremap <f3> :e<cr>
 
 set autoindent
 set autowrite
@@ -88,26 +90,21 @@ set ttyfast
 set wildmenu
 set wrap
 
-let g:indentLine_char = '|'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '.'
-let g:indentLine_showFirstIndentLevel = 0
-let g:indentLine_concealcursor = 'inc'
-let g:indentLine_conceallevel = 2
-let g:indentLine_setConceal = 0
-let g:indentLine_color_term = 239
-
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = '<c-c>'
-let g:multi_cursor_select_all_word_key = '<a-c>'
-let g:multi_cursor_start_key           = 'g<c-c>'
-let g:multi_cursor_select_all_key      = 'g<a-c>'
-let g:multi_cursor_next_key            = '<c-c>'
-let g:multi_cursor_prev_key            = '<c-p>'
-let g:multi_cursor_skip_key            = '<c-x>'
-let g:multi_cursor_quit_key            = '<esc>'
-
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-l>'
+let g:multi_cursor_select_all_word_key = '<A-l>'
+let g:multi_cursor_start_key           = 'g<C-l>'
+let g:multi_cursor_select_all_key      = 'g<A-l>'
+let g:multi_cursor_next_key            = '<C-l>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+let g:airline#extensions#tabline#enabled = 0
