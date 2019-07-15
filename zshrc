@@ -108,7 +108,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias python="python2"
 alias pip="pip2"
-alias open="xdg-open"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 if [ "$HOSTNAME" = "mbp" ]; then
